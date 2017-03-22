@@ -1,6 +1,17 @@
 # [Target Shopping cart demo](http://localhost:3333/)
 
-A simple shopping cart based on [AngularJS](http://angularjs.org), [Grunt](http://gruntjs.org) and [LESS](http://lesscss.org) for Target shopping cart demo.<br/>
+A simple shopping cart based on [AngularJS](http://angularjs.org), [Grunt](http://gruntjs.org) and [LESS](http://lesscss.org) for Target shopping cart demo.
+
+
+## Product listing page
+[![Product Listing Page ]( https://github.com/karthi1987/target-shopping-cart/blob/master/build/assets/img/ProductListing.png )]
+
+## Product detail page
+[![Product Detail Page ]( https://github.com/karthi1987/target-shopping-cart/blob/master/build/assets/img/ProductDetail.png )]
+
+## Product checkout page
+[![Product Checkout Page ]( https://github.com/karthi1987/target-shopping-cart/blob/master/build/assets/img/ProductCheckout.png )]
+
 
 ## Quick start
 Install Node.js and then:
@@ -81,7 +92,7 @@ learn more.
 ### The Build System
 
 `Gruntfile.js`. is a quick introduction to the
-tasks provided and should be plenty to get you started.
+tasks provided and should be plenty to get started.
 
 `grunt watch` will execute a full build up-front and then run any of the aforementioned `delta:*` tasks as needed to ensure the fastest possible build. So whenever we're working on the project, start with:
 
