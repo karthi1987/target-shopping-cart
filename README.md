@@ -21,7 +21,7 @@ $ grunt
 ## Tools
 * [AngularJS](http://angularjs.org) - Base framework
 * [Grunt](http://gruntjs.org) - Build tool
-* [LESS](http://lesscss.org) - CSS, but smth more
+* [LESS](http://lesscss.org) - CSS
 * [Animate.css](http://daneden.github.io/animate.css/) - Animation library, use with ng-animate
 * [Numeral.js](http://numeraljs.com/) - Work with numbers, use with filter
 
@@ -60,7 +60,7 @@ their own `README.md` file with additional documentation, so browse around to
 learn more.
 
 - `karma/` - test configuration.
-- `src/` - our application sources.
+- `src/` - the application sources.
 - `vendor/` - third-party libraries. [Bower](http://bower.io) will install
   packages here. Anything added to this directory will need to be manually added
   to `build.config.js` and `karma/karma-unit.js` to be picked up by the build
@@ -75,15 +75,12 @@ learn more.
 - `module.prefix` and `module.suffix` - our compiled application script is
   wrapped in these, which by default are used to place the application inside a
   self-executing anonymous function to ensure no clashes with other libraries.
-- `package.json` - metadata about the app, used by NPM and our build script. Our
+- `package.json` - metadata about the app, used by NPM and the build script. the
   NPM dependencies are listed here.
 
 ### The Build System
 
-The best way to learn about the build system is by familiarizing yourself with
-Grunt and then reading through the heavily documented build script,
-`Gruntfile.js`. But you don't need to do that to be very productive with
-`ngBoilerplate`. What follows in this section is a quick introduction to the
+`Gruntfile.js`. is a quick introduction to the
 tasks provided and should be plenty to get you started.
 
 `grunt watch` will execute a full build up-front and then run any of the aforementioned `delta:*` tasks as needed to ensure the fastest possible build. So whenever we're working on the project, start with:
