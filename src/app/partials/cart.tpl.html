@@ -1,0 +1,87 @@
+<h2 class="text-info" aria-label="alert">
+	<span class="product-header">Shopping cart</span>
+</h2>
+
+<br/><br/>
+
+<div class="row-fluid">
+	<div class="col-md-8">
+
+		<!-- items -->
+		<table class="table table-bordered">
+
+			<!-- header -->
+			<thead>
+				<tr class="head">
+					<th>Item</th>
+					<th>Quantity</th>
+					<th>Price</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+
+			<!-- empty cart message -->
+			<tr ng-hide="cart.getTotalCount() > 0" >
+				<td class="tdCenter" colspan="4">
+					Your cart is empty.
+				</td>
+			</tr>
+
+			<!-- cart items -->
+			<tr ng-repeat="item in cart.items | orderBy:'name'">
+				<td>{{item.name}}</td>
+				<td class="tdCenter">
+				  <div class="input-append">
+					<!-- use type=tel instead of  to prevent spinners -->
+					<input
+						class="span3 text-center input-type" type="tel" 
+						ng-model="item.quantity" 
+						ng-change="cart.saveItems()" />
+					<button 
+						class="btn btn-small " type="button" 
+						ng-disabled="item.quantity >= 1000"
+						ng-click="cart.addItem(item.sku, item.name, item.price, +1)">+</button>
+					<button 
+						class="btn btn-small " type="button" 
+						ng-disabled="item.quantity <= 1"
+						ng-click="cart.addItem(item.sku, item.name, item.price, -1)">-</button>
+				  </div>
+				</td>
+				<td class="tdRight">{{item.price * item.quantity | currency}}</td>
+				<td class="tdCenter" title="remove from cart">
+					<a href="" ng-click="cart.addItem(item.sku, item.name, item.price, -10000000)" >
+						<i class="icon-remove" />
+					</a>
+				</td>
+			</tr>
+
+			<!-- footer -->
+			<tr class="table-footer">
+				<td style="border-right: 1px solid #ccc;"><b>Total</b></td>
+				<td class="tdCenter" style="border-right: 1px solid #ccc;"><b>{{cart.getTotalCount()}}</b></td>
+				<td class="tdRight" style="border-right: 1px solid #ccc;"><b>{{cart.getTotalPrice() | currency}}</b></td>
+				<td />
+			</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<!-- buttons -->
+	<div class="col-md-4">
+		<div class="text-info" style="text-align:center;">
+			<button 
+				class="btn call-to-action" 
+				onclick="window.location.href='index.html'">
+				<i class="icon-chevron-left" /> back to store
+			</button>
+			<button 
+				class="btn call-to-action" 
+				ng-click="cart.clearItems()" 
+				ng-disabled="cart.getTotalCount() < 1" >
+				<i class="icon-trash icon-white" /> clear cart
+			</button>
+		</div>
+	</div>
+</div>
+

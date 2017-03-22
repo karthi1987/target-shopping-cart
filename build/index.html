@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="MyStore">
+<head>
+  <title ng-bind="pageTitle"></title>
+  <base href="/">
+
+  <!-- font awesome from BootstrapCDN -->
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+  <!-- compiled CSS -->
+  <link rel="stylesheet" type="text/css" href="./assets/target-shopping-cart-1.0.css" />
+
+</head>
+<body>
+  <div class="header">
+    <h1>Target store demo</h1>
+    <div class="logo"></div>
+  </div>
+  <div class="container" ui-view="main"></div>
+  <div class="footer">
+     <p>© 2017 Target, inc.</p>
+  </div>
+  <!-- compiled JavaScript -->
+  
+    <script type="text/javascript" src="./vendor/jquery/dist/jquery.js"></script>
+  
+    <script type="text/javascript" src="./vendor/lodash/dist/lodash.js"></script>
+  
+    <script type="text/javascript" src="./vendor/angular/angular.js"></script>
+  
+    <script type="text/javascript" src="./vendor/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  
+    <script type="text/javascript" src="./vendor/angular-cookies/angular-cookies.js"></script>
+  
+    <script type="text/javascript" src="./vendor/angular-local-storage/angular-local-storage.js"></script>
+  
+    <script type="text/javascript" src="./vendor/angular-ui-router/release/angular-ui-router.js"></script>
+  
+    <script type="text/javascript" src="./vendor/numeral/numeral.js"></script>
+  
+    <script type="text/javascript" src="./vendor/ngprogress/build/ngProgress.js"></script>
+  
+    <script type="text/javascript" src="./src/app/app.js"></script>
+  
+    <script type="text/javascript" src="./src/app/js/cart.js"></script>
+  
+    <script type="text/javascript" src="./src/app/js/product.js"></script>
+  
+    <script type="text/javascript" src="./src/app/js/store.js"></script>
+  
+    <script type="text/javascript" src="./templates-common.js"></script>
+  
+    <script type="text/javascript" src="./templates-app.js"></script>
+  
+</body>
+</html>
