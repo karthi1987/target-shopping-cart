@@ -5,10 +5,10 @@
 <br/><br/>
 
 <div class="row-fluid">
-	<div class="col-md-8">
+	<div style="min-height: 45vh;">
 
 		<!-- items -->
-		<table class="table table-bordered">
+		<table class="table">
 
 			<!-- header -->
 			<thead>
@@ -68,15 +68,15 @@
 	</div>
 
 	<!-- buttons -->
-	<div class="col-md-4">
+	<div>
 		<div class="text-info" style="text-align:center;">
 			<button 
-				class="btn call-to-action" 
+				class="call-to-action large-buttons" 
 				onclick="window.location.href='index.html'">
 				<i class="icon-chevron-left" /> back to store
 			</button>
 			<button 
-				class="btn call-to-action" 
+				class="call-to-action large-buttons" 
 				ng-click="cart.clearItems()" 
 				ng-disabled="cart.getTotalCount() < 1" >
 				<i class="icon-trash icon-white" /> clear cart

@@ -18,9 +18,9 @@
 </p>
 
 <div class="row-fluid">
-	<div class="col-md-8">
+	<div>
 		<!-- product info -->
-		<table class="table table-bordered">
+		<table class="table">
 
 			<tr>
 				<td class="tdRight"><b>Calories</b></td>
@@ -41,21 +41,21 @@
 	</div>
 
 	<!-- buttons -->
-	<div class="col-md-4">
+	<div>
 		<div class="text-info" style="text-align:center;">
 			<button 
-				class="btn btn-block call-to-action" 
+				class="btn-block call-to-action large-buttons" 
 				ng-click="cart.addItem(product.sku, product.name, product.price, 1)">
 				<i class="icon-shopping-cart icon-white" /> add to cart
 			</button>
 			<button 
-				class="btn btn-block call-to-action" 
+				class="btn-block call-to-action large-buttons large-buttons-text-bigger" 
 				ng-click="cart.addItem(product.sku, product.name, product.price, -10000)"
 				ng-disabled="cart.getTotalCount(product.sku) < 1">
 				<i class="icon-trash icon-white" /> remove from cart
 			</button>
 			<button 
-				class="btn call-to-action" 
+				class="call-to-action large-buttons" 
 				onclick="window.location.href=''">
 				<i class="icon-chevron-left" /> back to store
 			</button>

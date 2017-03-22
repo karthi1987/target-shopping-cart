@@ -9,10 +9,10 @@ angular.module("partials/cart.tpl.html", []).run(["$templateCache", function($te
     "<br/><br/>\n" +
     "\n" +
     "<div class=\"row-fluid\">\n" +
-    "	<div class=\"col-md-8\">\n" +
+    "	<div style=\"min-height: 45vh;\">\n" +
     "\n" +
     "		<!-- items -->\n" +
-    "		<table class=\"table table-bordered\">\n" +
+    "		<table class=\"table\">\n" +
     "\n" +
     "			<!-- header -->\n" +
     "			<thead>\n" +
@@ -72,15 +72,15 @@ angular.module("partials/cart.tpl.html", []).run(["$templateCache", function($te
     "	</div>\n" +
     "\n" +
     "	<!-- buttons -->\n" +
-    "	<div class=\"col-md-4\">\n" +
+    "	<div>\n" +
     "		<div class=\"text-info\" style=\"text-align:center;\">\n" +
     "			<button \n" +
-    "				class=\"btn call-to-action\" \n" +
+    "				class=\"call-to-action large-buttons\" \n" +
     "				onclick=\"window.location.href='index.html'\">\n" +
     "				<i class=\"icon-chevron-left\" /> back to store\n" +
     "			</button>\n" +
     "			<button \n" +
-    "				class=\"btn call-to-action\" \n" +
+    "				class=\"call-to-action large-buttons\" \n" +
     "				ng-click=\"cart.clearItems()\" \n" +
     "				ng-disabled=\"cart.getTotalCount() < 1\" >\n" +
     "				<i class=\"icon-trash icon-white\" /> clear cart\n" +
@@ -114,9 +114,9 @@ angular.module("partials/product.tpl.html", []).run(["$templateCache", function(
     "</p>\n" +
     "\n" +
     "<div class=\"row-fluid\">\n" +
-    "	<div class=\"col-md-8\">\n" +
+    "	<div>\n" +
     "		<!-- product info -->\n" +
-    "		<table class=\"table table-bordered\">\n" +
+    "		<table class=\"table\">\n" +
     "\n" +
     "			<tr>\n" +
     "				<td class=\"tdRight\"><b>Calories</b></td>\n" +
@@ -137,21 +137,21 @@ angular.module("partials/product.tpl.html", []).run(["$templateCache", function(
     "	</div>\n" +
     "\n" +
     "	<!-- buttons -->\n" +
-    "	<div class=\"col-md-4\">\n" +
+    "	<div>\n" +
     "		<div class=\"text-info\" style=\"text-align:center;\">\n" +
     "			<button \n" +
-    "				class=\"btn btn-block call-to-action\" \n" +
+    "				class=\"btn-block call-to-action large-buttons\" \n" +
     "				ng-click=\"cart.addItem(product.sku, product.name, product.price, 1)\">\n" +
     "				<i class=\"icon-shopping-cart icon-white\" /> add to cart\n" +
     "			</button>\n" +
     "			<button \n" +
-    "				class=\"btn btn-block call-to-action\" \n" +
+    "				class=\"btn-block call-to-action large-buttons large-buttons-text-bigger\" \n" +
     "				ng-click=\"cart.addItem(product.sku, product.name, product.price, -10000)\"\n" +
     "				ng-disabled=\"cart.getTotalCount(product.sku) < 1\">\n" +
     "				<i class=\"icon-trash icon-white\" /> remove from cart\n" +
     "			</button>\n" +
     "			<button \n" +
-    "				class=\"btn call-to-action\" \n" +
+    "				class=\"call-to-action large-buttons\" \n" +
     "				onclick=\"window.location.href=''\">\n" +
     "				<i class=\"icon-chevron-left\" /> back to store\n" +
     "			</button>\n" +
@@ -192,7 +192,7 @@ angular.module("partials/store.tpl.html", []).run(["$templateCache", function($t
     "</div>\n" +
     "\n" +
     "\n" +
-    "<table class=\"table table-bordered\">\n" +
+    "<table class=\"table\">\n" +
     "	<thead>\n" +
     "	<tr class=\"head\">\n" +
     "	  <th>Product image</th>\n" +
